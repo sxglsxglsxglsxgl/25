@@ -358,7 +358,7 @@ body.burger-animate .burger-bar { opacity: 1 !important; pointer-events: auto !i
   gap: 18px;
   text-align: center;
   /* push block visually lower on the screen */
-  transform: translateY(14vh);
+  transform: translateY(32vh);
 }
 
 .hero__title {
