@@ -352,15 +352,17 @@ body.burger-animate .burger-bar { opacity: 1 !important; pointer-events: auto !i
 }
 
 
-/* === Hero layout & Russian title (2025-11-15) === */
+/* === Hero layout & responsive title (2025-11-15) === */
 .hero__center {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 18px;
+  align-items: center;
   text-align: center;
-  /* push block visually lower on the screen */
-  transform: translateY(32vh);
 }
 
+/* Desktop: hero block is vertically centered by default (grid from base styles) */
+/* Title + subline ordering: title above, sub below */
 .hero__title {
   margin: 0;
   display: flex;
@@ -369,21 +371,23 @@ body.burger-animate .burger-bar { opacity: 1 !important; pointer-events: auto !i
   gap: 2px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  order: 1;
 }
 
 .hero__title-main {
-  font-size: clamp(40px, 11vw, 96px);
+  font-size: clamp(40px, 8vw, 80px);
   line-height: 0.9;
 }
 
 .hero__title-sub {
-  font-size: clamp(30px, 8vw, 72px);
+  font-size: clamp(32px, 6vw, 64px);
   line-height: 0.9;
   opacity: 0.9;
 }
 
-/* Small lead-in line above title */
+/* Small lead-in line: placement + base style */
 .hero__sub {
+  order: 2; /* on desktop "Born in St. Petersburg" goes under the title */
   min-height: 1.6em;
   font-size: clamp(13px, 2.2vw, 18px);
   color: var(--muted);
@@ -391,6 +395,45 @@ body.burger-animate .burger-bar { opacity: 1 !important; pointer-events: auto !i
   text-transform: uppercase;
   white-space: pre-wrap;
   border-right: 1px solid transparent;
+}
+
+/* Mobile layout tweaks */
+@media (max-width: 768px) {
+  /* Push hero block to the bottom of the viewport on phones */
+  .hero {
+    align-items: end;
+  }
+
+  .hero__center {
+    transform: none;
+  }
+
+  /* On mobile the subline should be ABOVE the title */
+  .hero__sub {
+    order: 0;
+  }
+
+  .hero__title {
+    order: 1;
+  }
+
+  /* Make "CLASSNOE" span almost full width of the screen */
+  .hero__title-main {
+    font-size: clamp(44px, 16vw, 64px);
+    letter-spacing: 0.18em;
+  }
+
+  /* "MESTO" also large, same visual weight */
+  .hero__title-sub {
+    font-size: clamp(40px, 14vw, 60px);
+  }
+}
+
+/* Desktop / tablet: no vertical offset */
+@media (min-width: 769px) {
+  .hero__center {
+    transform: none;
+  }
 }
 
 /* === Vertical dots on the left center (2025-11-15) === */
