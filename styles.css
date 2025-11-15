@@ -464,3 +464,21 @@ body.burger-animate .burger-bar { opacity: 1 !important; pointer-events: auto !i
   background: #fff;
   transform: scale(1.1);
 }
+
+
+/* Mobile overrides for equal title sizes and left align */
+@media (max-width: 768px) {
+  .hero__center {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+  .hero__title {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+  .hero__title-main,
+  .hero__title-sub {
+    font-size: clamp(44px, 16vw, 64px) !important;
+    letter-spacing: 0.18em !important;
+  }
+}
