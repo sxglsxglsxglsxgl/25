@@ -497,3 +497,19 @@ body.burger-animate .burger-bar { opacity: 1 !important; pointer-events: auto !i
     text-align: left !important;
   }
 }
+
+/* Mobile-only layout tweaks: move dots to the right, burger to bottom-right */
+@media (max-width: 768px) {
+  .dots {
+    left: auto;
+    right: max(12px, calc(var(--safe-right) + 12px));
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .burger-bar {
+    top: auto;
+    bottom: calc(var(--safe-bottom) + 16px);
+    right: calc(var(--safe-right) + 16px);
+  }
+}
