@@ -379,7 +379,7 @@ body.burger-animate .burger-bar { opacity: 1 !important; pointer-events: auto !i
 
 .hero__title-main,
 .hero__title-sub {
-  font-size: clamp(40px, 8vw, 80px);
+  font-size: clamp(32px, 6vw, 56px);
   line-height: 0.9;
 }
 
@@ -470,6 +470,9 @@ body.burger-animate .burger-bar { opacity: 1 !important; pointer-events: auto !i
   .hero__center {
     align-items: flex-start !important;
     text-align: left !important;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   /* On mobile, keep "Born in St. Petersburg" above the title (orders set in base CSS) */
@@ -486,7 +489,7 @@ body.burger-animate .burger-bar { opacity: 1 !important; pointer-events: auto !i
   .hero__title-main,
   .hero__title-sub {
     display: block;
-    font-size: clamp(32px, 9vw, 40px) !important;
+    font-size: clamp(40px, 9vw, 64px) !important;
     letter-spacing: 0.12em !important;
   }
 
