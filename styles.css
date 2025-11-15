@@ -64,7 +64,14 @@ body.is-locked, body.has-menu-open, body.is-menu-closing { overflow: hidden; }
   margin: 0;
   padding: 0;
   border: 0;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 18px 38px rgba(0, 0, 0, 0.55);
   cursor: pointer;
   z-index: 9999;
   pointer-events: none;
@@ -189,7 +196,14 @@ body.burger-animate .dots, body:has(.burger-bar[data-active="1"]) .dots { opacit
   margin: 0;
   padding: 0;
   border: 0;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 18px 38px rgba(0, 0, 0, 0.55);
   cursor: pointer;
   z-index: 9999;
   pointer-events: none;
