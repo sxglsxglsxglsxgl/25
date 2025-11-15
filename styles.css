@@ -352,72 +352,14 @@ body.burger-animate .burger-bar { opacity: 1 !important; pointer-events: auto !i
 }
 
 
-/* === Hero layout & Russian title (2025-11-15) === */
-.hero__center {
-  display: grid;
-  gap: 18px;
-  text-align: center;
-  /* push block visually lower on the screen */
-  transform: translateY(32vh);
-}
-
-.hero__title {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.hero__title-main {
-  font-size: clamp(40px, 11vw, 96px);
-  line-height: 0.9;
-}
-
-.hero__title-sub {
-  font-size: clamp(30px, 8vw, 72px);
-  line-height: 0.9;
-  opacity: 0.9;
-}
-
-/* Small lead-in line above title */
-.hero__sub {
-  min-height: 1.6em;
-  font-size: clamp(13px, 2.2vw, 18px);
-  color: var(--muted);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  white-space: pre-wrap;
-  border-right: 1px solid transparent;
-}
-
-/* === Vertical dots on the left center (2025-11-15) === */
-.dots {
-  position: fixed;
-  left: max(12px, calc(var(--safe-left) + 8px));
-  right: auto;
-  top: 50%;
-  bottom: auto;
-  transform: translateY(-50%);
-  display: grid;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* Normalize dot buttons (works for both grid/flex) */
-.dots button {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: 0;
-  background: #3a3a3a;
-  padding: 0;
-  cursor: pointer;
-}
-
-.dots button[aria-current="true"] {
-  background: #fff;
-  transform: scale(1.1);
+/* Desktop: center the hero block */
+@media (min-width: 768px) {
+  .hero__center {
+    transform: translate(-50%, -50%) !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+  }
 }
