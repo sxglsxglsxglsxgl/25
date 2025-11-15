@@ -128,7 +128,7 @@
     // buildDots() delayed to after intro;
     sections[0].classList.add('is-visible');
     await sleep(200);
-    sub.textContent = 'Born in St. Petersburg';
+    sub.textContent = 'BORN IN SAINT PETERSBURG';
     // prepare robust animation start
     function afterIntro(){ try{ buildDots(); }catch(e){} try{ armBurger(); }catch(e){} try{ unlockScroll(); }catch(e){} }
     // reset in case class was present, force reflow, attach listener, then start

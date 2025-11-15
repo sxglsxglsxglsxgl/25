@@ -38,18 +38,40 @@ body.is-locked, body.has-menu-open, body.is-menu-closing { overflow: hidden; }
   padding: max(24px, var(--safe-top)) max(24px, var(--safe-right))
            max(24px, var(--safe-bottom)) max(24px, var(--safe-left));
 }
-.hero__center { display: grid; gap: 12px; text-align: center; }
+.hero__center {
+  display: grid;
+  gap: 16px;
+  text-align: center;
+  transform: translateY(18vh);
+}
+
 .hero__title {
   margin: 0;
-  font-size: clamp(24px, 5.2vw, 60px);
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
+
+.hero__title-main {
+  font-size: clamp(42px, 12vw, 96px);
+  line-height: 0.9;
+}
+
+.hero__title-sub {
+  font-size: clamp(32px, 9vw, 72px);
+  line-height: 0.9;
+  opacity: 0.9;
+}
+
 .hero__sub {
   min-height: 1.6em;
   font-size: clamp(13px, 2.2vw, 18px);
   color: var(--muted);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   white-space: pre-wrap;
   border-right: 1px solid transparent;
 }
