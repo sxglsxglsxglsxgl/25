@@ -366,14 +366,14 @@ body.burger-animate .burger-bar { opacity: 1 !important; pointer-events: auto !i
 }
 
 
-/* Desktop: center the hero block */
-@media (min-width: 768px) {
-  .hero__center {
-    transform: translate(-50%, -50%) !important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    text-align: center;
+
+
+/* Mobile: hero title at the very bottom of the screen */
+@media (max-width: 767px) {
+  .hero {
+    align-items: flex-end;
+  }
+  .hero .frame {
+    padding-bottom: max(32px, calc(var(--safe-bottom) + 16px));
   }
 }
