@@ -467,18 +467,29 @@ body.burger-animate .burger-bar { opacity: 1 !important; pointer-events: auto !i
 
 
 /* Mobile overrides for equal title sizes and left align */
+
 @media (max-width: 768px) {
   .hero__center {
     align-items: flex-start !important;
     text-align: left !important;
   }
+
   .hero__title {
-    align-items: flex-start !important;
     text-align: left !important;
+    margin: 0;
+    line-height: 1;
+    word-break: break-word;
   }
+
   .hero__title-main,
   .hero__title-sub {
-    font-size: clamp(44px, 16vw, 64px) !important;
-    letter-spacing: 0.18em !important;
+    display: block;
+    font-size: clamp(32px, 13vw, 44px) !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  .hero__sub {
+    text-align: left !important;
   }
 }
+
